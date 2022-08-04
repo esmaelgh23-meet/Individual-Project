@@ -41,6 +41,8 @@ def signup():
 
 
 
+
+
 @app.route('/signout')
 def signout():
     login_session['user'] = None
@@ -48,6 +50,10 @@ def signout():
     return redirect(url_for('signin'))
 
 
+
+@app.route("/quizzez")
+def quizzez():
+    return render_template("quizzez.html")
 
 
 #Code goes above here
